@@ -1,4 +1,3 @@
-
 /**
  * HelpScreen is for display
  */

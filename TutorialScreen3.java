@@ -1,4 +1,3 @@
-
 import java.awt.DisplayMode;
 
 import java.awt.Graphics2D;
