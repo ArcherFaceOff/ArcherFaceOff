@@ -702,7 +702,7 @@ public class Game implements KeyListener {
         			if(ShotLowY> PlayerLowY) {	       
          				if (ShotHighX < PlayerHighX||ShotLowX<PlayerHighX) {         				
          					if (ShotLowY < PlayerHighY) {
-         						CreateHole(shot,1, player);
+         						//CreateHole(shot,1, player);
         						ret = true;		
          					}
         				}
@@ -1155,7 +1155,6 @@ public class Game implements KeyListener {
     		g.drawImage(BOOM.getImage(), Math.round(player.getX() - 14), Math.round(player.getY() - 75), null);
     		g.drawString("GAME OVER: PLAYER " + playerNumber + " WINS",300,230);
             g.drawString("Press 'R' to play again", 310, 250);
-             	GameSTATE=3;
              
              //Adds sounds after game
              if(playerNumber==1){ // Player 1 wins
@@ -1186,14 +1185,13 @@ public class Game implements KeyListener {
 			if(topy[Math.round(shot.getX())] < Math.round(shot.getY()))//above the top of the terrain
 			{	    		
 				
-			    CreateHole(shot,weapon, player);
+			   // CreateHole(shot,weapon, player);
   			}
 		}
 		
 		
     }
-    
-    private void CreateHole(Sprite shot,int weapon, int player)
+    /* private void CreateHole(Sprite shot,int weapon, int player)
     {
 			
 			soundShot.close(); //resets sound after being shot
@@ -1223,7 +1221,7 @@ public class Game implements KeyListener {
 			}
 			
     }
-
+	*/
 
 	/*
 	Deprecated code. Replaced by resetShot() in Sprite.java
@@ -1309,19 +1307,18 @@ public class Game implements KeyListener {
     	  GameSTATEchanged = true;
       }
       if (keyCode == KeyEvent.VK_R) {
-    	  if (PauseMenuOpen == true) // open pause menu
-    		  restartgame = 1;
-    	  else
-    		  restartgame=1;
+    	  if (PauseMenuOpen == true){ // open pause menu
+    		  restartgame = 0;}
+    	  else if (PauseMenuOpen == false){
+    		  restartgame=0;
     	  Tank1.setHealth(100);
   		  Tank2.setHealth(100);
   		  Tank1.setSecondWeaponAmmo(2);
   		  Tank1.setThirdWeaponAmmo(1);
   		  Tank2.setSecondWeaponAmmo(2);
 		  Tank2.setThirdWeaponAmmo(1);
-		  curFuel = 110;
-		  
-		  
+		  curFuel = 110;  }
+
       }
       
      	if (keyCode == KeyEvent.VK_Z) {
