@@ -702,7 +702,7 @@ public class Game implements KeyListener {
         			if(ShotLowY> PlayerLowY) {	       
          				if (ShotHighX < PlayerHighX||ShotLowX<PlayerHighX) {         				
          					if (ShotLowY < PlayerHighY) {
-         						//CreateHole(shot,1, player);
+         						CreateHole(shot,1, player);
         						ret = true;		
          					}
         				}
@@ -1154,7 +1154,7 @@ public class Game implements KeyListener {
  			g.setColor(Color.black);
     		g.drawImage(BOOM.getImage(), Math.round(player.getX() - 14), Math.round(player.getY() - 75), null);
     		g.drawString("GAME OVER: PLAYER " + playerNumber + " WINS",300,230);
-            g.drawString("Press 'R' to play again", 310, 250);
+            g.drawString("Press '0' to play again", 310, 250);
              
              //Adds sounds after game
              if(playerNumber==1){ // Player 1 wins
@@ -1185,13 +1185,13 @@ public class Game implements KeyListener {
 			if(topy[Math.round(shot.getX())] < Math.round(shot.getY()))//above the top of the terrain
 			{	    		
 				
-			   // CreateHole(shot,weapon, player);
+			    CreateHole(shot,weapon, player);
   			}
 		}
 		
 		
     }
-    /* private void CreateHole(Sprite shot,int weapon, int player)
+    private void CreateHole(Sprite shot,int weapon, int player)
     {
 			
 			soundShot.close(); //resets sound after being shot
@@ -1200,8 +1200,9 @@ public class Game implements KeyListener {
 		    int counter3=Math.round(shot.getX())-14; //Left/Right Starting Square pos adjustment on hole
 			int holderSin=0;
 			int holderCos=1;
-			double groundHolder=180;		
-			while (groundHolder <= 359)//creates hole starting at 180 degrees and going to 360
+			double groundHolder=180;	
+
+			/*while (groundHolder <= 359)//creates hole starting at 180 degrees and going to 360
 			{
 				holderSin = (int)(Math.floor((Math.sin(groundHolder/57.3))*weapon*5));//uses a length of 10 for hole
 				if (counter3>3)
@@ -1218,10 +1219,11 @@ public class Game implements KeyListener {
 
 				holderCos++;
 				groundHolder++;	
-			}
+			}*/
 			
     }
-	*/
+	
+
 
 	/*
 	Deprecated code. Replaced by resetShot() in Sprite.java
@@ -1306,7 +1308,7 @@ public class Game implements KeyListener {
     		  GameSTATE = 0;
     	  GameSTATEchanged = true;
       }
-      if (keyCode == KeyEvent.VK_R) {
+      if (keyCode == KeyEvent.VK_0) {
     	  if (PauseMenuOpen == true){ // open pause menu
     		  restartgame = 0;}
     	  else if (PauseMenuOpen == false){
