@@ -1268,7 +1268,7 @@ public class Game implements KeyListener {
   		
 	  }*/
 
-	  if (keyCode == KeyEvent.VK_O) {
+	  if (keyCode == KeyEvent.VK_P) {
   		if (PauseMenuOpen == false)// open pause menu
   		{   
   			PauseMenuOpen = true;
@@ -1288,7 +1288,7 @@ public class Game implements KeyListener {
 				ControlsOverlayOpen = false; // close controls overlay
 			}
 	      }
-      if (keyCode == KeyEvent.VK_W) {
+      if (keyCode == KeyEvent.VK_Q) {
     	  if (PauseMenuOpen == true) {
 			   if(WindVar<3)
 			   {
@@ -1323,7 +1323,7 @@ public class Game implements KeyListener {
 
       }
       
-     	if (keyCode == KeyEvent.VK_Z) {
+     	if (keyCode == KeyEvent.VK_T) {
      		//Set Y sets the tanks to start on the ground
      		//Therefore not falling and losing health
 
@@ -1550,28 +1550,28 @@ public class Game implements KeyListener {
             {
                 // Player 1 key to cycle weapons = 'z' 
                 if (turn==1) {
-                    if (keyCode == KeyEvent.VK_SHIFT && Tank1.getWeapon2() == 0) {//add weapon
+                    if (keyCode == KeyEvent.VK_R && Tank1.getWeapon2() == 0) {//add weapon
                         Tank1.setWeapon2(1);    
                     }
-                    else if (keyCode == KeyEvent.VK_SHIFT && Tank1.getWeapon2() == 1) {
+                    else if (keyCode == KeyEvent.VK_R && Tank1.getWeapon2() == 1) {
                         Tank1.setWeapon2(2);
                     }
-                    else if (keyCode == KeyEvent.VK_SHIFT && Tank1.getWeapon2() == 2) {
+                    else if (keyCode == KeyEvent.VK_R && Tank1.getWeapon2() == 2) {
                         Tank1.setWeapon2(0);
                     } 
                     else {
                         
                     }
                     
-                    // Player 1 power bar increase controls = 'e'
-                    if (keyCode == KeyEvent.VK_E) {
+                    // Player 1 power bar increase controls = 'x'
+                    if (keyCode == KeyEvent.VK_X) {
                           Tank1.setShotPower(-.01f + Tank1.getShotPower());
                           if (Tank1.getShotPower() <= -1) {
                               Tank1.setShotPower(-1);
                           }
                     }
-                    // Player 1 power bar decrease controls = 'q'
-                    if (keyCode == KeyEvent.VK_Q) {
+                    // Player 1 power bar decrease controls = 'z'
+                    if (keyCode == KeyEvent.VK_Z) {
                           Tank1.setShotPower(.01f + Tank1.getShotPower());
                           if (Tank1.getShotPower() >= -.01) {
                               Tank1.setShotPower((float)-.04);
@@ -1650,41 +1650,41 @@ public class Game implements KeyListener {
                 }
                 else if (turn==2) {
                     // player 2 cycle weapon controls
-                    if (keyCode == KeyEvent.VK_SHIFT && Tank2.getWeapon2() == 0) {//add weapon
+                    if (keyCode == KeyEvent.VK_R && Tank2.getWeapon2() == 0) {//add weapon
                         Tank2.setWeapon2(1);
                     }
-                    else if (keyCode == KeyEvent.VK_SHIFT && Tank2.getWeapon2() == 1) {
+                    else if (keyCode == KeyEvent.VK_R && Tank2.getWeapon2() == 1) {
                         Tank2.setWeapon2(2);
                     }
-                    else if (keyCode == KeyEvent.VK_SHIFT && Tank2.getWeapon2() == 2) {
+                    else if (keyCode == KeyEvent.VK_R && Tank2.getWeapon2() == 2) {
                         Tank2.setWeapon2(0);
                     } 
                     else {
                     }
                     // Player 2 power bar controls
-                    if (keyCode == KeyEvent.VK_PERIOD) {
+                    if (keyCode == KeyEvent.VK_X) {
                           Tank2.setShotPower(-.01f + Tank2.getShotPower());
                           if (Tank2.getShotPower() <= -1) {
                               Tank2.setShotPower(-1);
                           }
                     }
                     
-                    if (keyCode == KeyEvent.VK_COMMA) {
+                    if (keyCode == KeyEvent.VK_Z) {
                           Tank2.setShotPower(.01f + Tank2.getShotPower());
                           if (Tank2.getShotPower() >= -.01) {
                               Tank2.setShotPower((float)-.01);
                           }
                     }
                     // player 2 turret movement controls
-                    if (keyCode == KeyEvent.VK_DOWN) { 
+                    if (keyCode == KeyEvent.VK_S) { 
                            Tank2.increaseAngle();        
                     }
                     
-                    if (keyCode == KeyEvent.VK_UP) {
+                    if (keyCode == KeyEvent.VK_W) {
                             Tank2.decreaseAngle();        
                     }
                     // player 2 movement controsl
-                    if ((keyCode == KeyEvent.VK_LEFT) && (curFuel > 0)) {    
+                    if ((keyCode == KeyEvent.VK_A) && (curFuel > 0)) {    
                            //if(Tank2.getMovesLeft()>0) {
                                if (Tank2.getTankSprite().getX() >395){
                                    moving=true;
@@ -1697,7 +1697,7 @@ public class Game implements KeyListener {
                            //}
                     }
                     
-                    if ((keyCode == KeyEvent.VK_RIGHT) && (curFuel > 0)) {
+                    if ((keyCode == KeyEvent.VK_D) && (curFuel > 0)) {
                            //if(Tank2.getMovesLeft()>0) {
                                if (Tank2.getTankSprite().getX()<= 796 )
                                    {moving=true;
@@ -1711,7 +1711,7 @@ public class Game implements KeyListener {
                     }
                     
                     // player 2 fire key
-                    if (keyCode == KeyEvent.VK_ENTER)
+                    if (keyCode == KeyEvent.VK_SPACE)
                     {
                         shotcounter++;
                         terrainChange = false;
@@ -1983,25 +1983,25 @@ public class Game implements KeyListener {
 			g.drawString("Player One's Controls:", textAlignLeft, 140);
 			g.setFont(f);
 			g.setColor(Color.black);
-			g.drawString("Press UP and DOWN Arrows to Adjust your shot.", textAlignLeft, 155);
-			g.drawString("Press , and . to adjust power.", textAlignLeft, 170);
-			g.drawString("Press LEFT and RIGHT arrows to move L/R.", textAlignLeft, 185);
-			g.drawString("Press C to change weapons.",textAlignLeft, 200);
-			g.drawString("Press SPACE to fire.", textAlignLeft, 215);
+			g.drawString("Press 'W' and 'S' keys to adjust your shot.", textAlignLeft, 155);
+			g.drawString("Press 'Z' and 'X' to adjust power.", textAlignLeft, 170);
+			g.drawString("Press 'A' and 'D' arrows to move left and right.", textAlignLeft, 185);
+			g.drawString("Press 'R' to change weapons.",textAlignLeft, 200);
+			g.drawString("Press 'SPACE' to fire.", textAlignLeft, 215);
 			g.setColor(Color.darkGray);
 			g.setFont(new Font("SansSerif", Font.BOLD, 14));
 			g.drawString("Player Two's Controls:", textAlignLeft, 240);
 			g.setFont(f);
 			g.setColor(Color.black);
-			g.drawString("Press UP and DOWN Arrows to Adjust your shot.",
+			g.drawString("Press 'W' and 'S' keys to adjust your shot.",
 					textAlignLeft, 255);
-			g.drawString("Press , and . to adjust power", textAlignLeft, 270);
-			g.drawString("Press LEFT and RIGHT arrows to move L/R.", textAlignLeft, 285);
-			g.drawString("Press C to change weapons.", textAlignLeft,300);
-			g.drawString("Press SPACE to fire.", textAlignLeft, 315);
+			g.drawString("Press 'Z' and 'X' to adjust power", textAlignLeft, 270);
+			g.drawString("Press 'A' and 'D' keys to move L/R.", textAlignLeft, 285);
+			g.drawString("Press 'R' to change weapons.", textAlignLeft,300);
+			g.drawString("Press 'SPACE' to fire.", textAlignLeft, 315);
 			g.setColor(Color.darkGray);
 			g.setFont(new Font("SansSerif", Font.BOLD, 12));
-			g.drawString("Press 'W' to cycle wind options:", textAlignLeft, 335);
+			g.drawString("Press 'Q' to cycle wind options:", textAlignLeft, 335);
 			g.setFont(f);
 			g.setColor(Color.black);
 
@@ -2031,35 +2031,35 @@ public class Game implements KeyListener {
 			
 			g.setColor(Color.DARK_GRAY);
 			g.setFont(new Font("SansSerif", Font.BOLD, 14));
-			g.drawString("Press Z to change terrain.", textAlignLeft, 410);
-			g.drawString("Press R to restart the game.", textAlignLeft, 425);
+			g.drawString("Press 'T' to change terrain.", textAlignLeft, 410);
+			g.drawString("Press 'R' to restart the game.", textAlignLeft, 425);
 			g.drawString("Press Esc to end game.", textAlignLeft, 440);
 		 }
 		 if (ControlsOverlayOpen == true) {
-			int controlsCol1X = 305;
+			int controlsCol1X = 265;
 			int controlsCol2X = 405;
 			int controlsCol1Y = 480;
 			int controlsMarginBottom = 5;
 			
-			Color c = new Color(0.94f, 0.59f, 0.31f, 0.2f);
+			Color c = new Color(0.74f, 0.59f, 0.21f, 0.3f);
 			g.setColor(c);
-			g.fillRect(275, 465, 320, 120);
+			g.fillRect(250, 465, 320, 120);
 			g.setColor(Color.white);
 			Font f = g.getFont();
 			g.setFont(new Font("Arial", Font.BOLD, 12));
 			g.setFont(f);
 			g.setColor(Color.white);
-			g.drawString("Controls:", controlsCol1X, 
+			g.drawString("Controls for both Player 1 and Player 2:", controlsCol1X, 
 					controlsCol1Y);
 			g.setFont(new Font("Arial", Font.PLAIN, 11));
 			g.setFont(f);
 			// Draw Player 1 Controls in Overlay Window
-			g.drawString("AIM TURRET: UP ARROW & DOWN ARROW", controlsCol1X,
+			g.drawString("AIM TURRET: Use'W' for up & 'S' for down", controlsCol1X,
 					500);
-			g.drawString("ADJUST POWER: COMMA KEY & PERIOD KEY", controlsCol1X, 520);
-			g.drawString("MOVE FACE: LEFT ARROW & RIGHT ARROW", controlsCol1X, 540);
-			g.drawString("SPECIAL WEAPONS: 'C' KEY",controlsCol1X, 560);
-			g.drawString("SHOOT: SPACE BAR", controlsCol1X, 580);
+			g.drawString("ADJUST POWER: Use 'X' & 'Z' to adjust power", controlsCol1X, 520);
+			g.drawString("MOVE PLAYER: Use 'A' & 'D' to move L/R", controlsCol1X, 540);
+			g.drawString("SPECIAL WEAPONS: Use 'R' to cycle weapons",controlsCol1X, 560);
+			g.drawString("SHOOT: Use 'SPACE BAR' to shoot", controlsCol1X, 580);
 			
 			//Player 2's Controls
 			g.setFont(new Font("Arial", Font.BOLD, 12));
