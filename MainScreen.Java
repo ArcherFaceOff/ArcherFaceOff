@@ -188,7 +188,7 @@ public class MainScreen {
    	    g.drawImage(title, 170,120,null);
    		Font f = g.getFont();
    		g.setFont(new Font("SansSerif", Font.BOLD, 15));
-   		
+   /************		
 		  g.setColor(Color.black);
           g.drawString("Press Space Bar To Start",325,400);
           g.setFont(f);
@@ -212,6 +212,7 @@ public class MainScreen {
    	   	  {	  
    	   		  testVar = true;
    	   	  }
+  ****************/         //edited by Jim Webb Oct 23, 2014 	   	  
      }
      
     public static class KeyClass extends KeyAdapter
