@@ -236,14 +236,14 @@ public class Game implements KeyListener {
 		/* Weapons */
 		
 		//Player 1 - Regular
-		Image Bullet = loadImage("images/Arrow.png");
-		Image Bullet2 = loadImage("images/Arrow2.png");
-		Image Bullet3 = loadImage("images/Arrow3.png");
+		Image Bullet = loadImage("images/Arrow.gif");
+		Image Bullet2 = loadImage("images/Arrow.gif");
+		Image Bullet3 = loadImage("images/Arrow.gif");
 		
 		//Player 2 -Regular
-		Image P2Bullet = loadImage("images/Arrow-2.png");
-		Image P2Bullet2 = loadImage("images/Arrow2-2.png");
-		Image P2Bullet3 = loadImage("images/Arrow3-2.png");
+		Image P2Bullet = loadImage("images/Arrow.gif");
+		Image P2Bullet2 = loadImage("images/Arrow.gif");
+		Image P2Bullet3 = loadImage("images/Arrow.gif");
 				
 		//Player 1 - Special
 		Image bomb = loadImage("images/FlamingArrow1.png");
@@ -798,6 +798,7 @@ public class Game implements KeyListener {
         
         //  Draw the tank's turret. 19 = 1/2 centering the position of the turret on the tank. 3 = making the turret at the correct height of the tank.
 		// THIS IS TO CHANGE WHERE THE TURRET IS CONNECTED TO THE TANK.....
+        g.setColor(Color.white);
         g.drawLine(Math.round(Tank1.getTankSprite().getX())+(int)(Tank1.getTankSprite().getWidth()*.55),Math.round(Tank1.getTankSprite().getY()+5),Tank1.getTurretAngleX(),Tank1.getTurretAngleY()+5);
 		g.drawLine(Math.round(Tank2.getTankSprite().getX())+(int)(Tank2.getTankSprite().getWidth()*.45),Math.round(Tank2.getTankSprite().getY()+5),Tank2.getTurretAngleX(),Tank2.getTurretAngleY()+5);
 		int y = Math.round(Tank1.getTankSprite().getY());
@@ -1890,7 +1891,7 @@ public class Game implements KeyListener {
     		 g.drawImage(powerIcon, powerBar1X-30, powerBar1Y, null); //power icon
     	 	g.drawImage(powerBar, powerBar1X, powerBar1Y, null); // power bar
     	 	// Draws rectangle that covers Player 1 Power Bar
-    	 	g.setColor(Color.darkGray );
+    	 	g.setColor(Color.white);
     	 	g.drawRect(powerBar1X + powerBar1Value, powerBar1Y, 
     			powerBar1X - (powerBar1X-111) - powerBar1Value, 22);
     	 	g.fillRect(powerBar1X + powerBar1Value, powerBar1Y, 
@@ -2295,9 +2296,9 @@ public class Game implements KeyListener {
     		//cloudy
     		if(levelNumber == "1" || levelNumber == "2" || levelNumber == "5")
             {
-        		Color terrainColor = new Color(0x009e00);//Terrain Color Adjustment
+        		//Color terrainColor = new Color(0x009e00);//Terrain Color Adjustment
         		
-    			g.setColor(terrainColor);
+    			g.setColor(Color.gray);
     			g.drawImage(terrainTexture, 0, 400, null);
 
             }
@@ -2306,10 +2307,10 @@ public class Game implements KeyListener {
     		
     		if(levelNumber == "3" || levelNumber == "4")
             {
-        		Color terrainColor = new Color(0x5e3b1f);//Terrain Color Adjustment
+        		//Color terrainColor = new Color(0x5e3b1f);//Terrain Color Adjustment
         		//Image terrainTexture = loadImage("images/terrainGreen.jpg");
     			//g.drawImage(terrainTexture, 0, 400, null);
-    			g.setColor(terrainColor);
+    			g.setColor(Color.gray);
 
             }
     		g.drawLine(basex,basey,topx,topy[basex]);
