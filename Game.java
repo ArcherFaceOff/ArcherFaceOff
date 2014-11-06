@@ -543,8 +543,8 @@ public class Game implements KeyListener {
        		}
        	else if(SecondaryTankShot.isActive())
        		{
-       		    SecondaryTankShot.setVelocityX(SecondaryTankShot.getVelocityX() - Windf); //WIND
-       		    SecondaryTankShot.setVelocityY(SecondaryTankShot.getVelocityY() + (Gravf));	//Gravity
+       		    SecondaryTankShot.setVelocityX(SecondaryTankShot.getVelocityX() - 0); //WIND
+       		    SecondaryTankShot.setVelocityY(SecondaryTankShot.getVelocityY() + (0));	//Gravity
        		}
        		
        	if(TankShot2.isActive())
@@ -554,8 +554,8 @@ public class Game implements KeyListener {
    			}
        	else if(SecondaryTankShot2.isActive())
    			{
-       		    SecondaryTankShot2.setVelocityX(SecondaryTankShot2.getVelocityX() - Windf); //WIND
-       		    SecondaryTankShot2.setVelocityY(SecondaryTankShot2.getVelocityY() + (Gravf));	//Gravity
+       		    SecondaryTankShot2.setVelocityX(SecondaryTankShot2.getVelocityX() - 0); //WIND
+       		    SecondaryTankShot2.setVelocityY(SecondaryTankShot2.getVelocityY() + (0));	//Gravity
    			}
 
 
