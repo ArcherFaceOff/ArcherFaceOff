@@ -222,12 +222,12 @@ public class Game implements KeyListener {
     		powerIcon = loadImage("images/uparrowicon.png"); //power icon
     		wImage = loadImage("images/john_win.jpg");
     	
-    		// Weapon Indicator Images
+      		// Weapon Indicator Images
     		weaponIndicatorBG = loadImage("images/weaponIndicatorBG.png"); // BG
     		weaponNormal = loadImage("images/weaponArrow.png");
 
-    		weaponHersco = loadImage("images/weaponBarrage.png");
-    		weaponNuclear = loadImage("images/weaponFlaming.png");
+    		weaponHersco = loadImage("images/BarragesmallUSSR.png");
+    		weaponNuclear = loadImage("images/FlamingArrow.png");
 
 		TankImage = loadImage(DataClass.getP1Tank());
 		Image TankImage2 = loadImage(DataClass.getP2Tank());
@@ -246,27 +246,25 @@ public class Game implements KeyListener {
 		Image P2Bullet3 = loadImage("images/Arrow.gif");
 				
 		//Player 1 - Special
-		Image bomb = loadImage("images/FlamingArrow1.png");
-		Image bomb2 = loadImage("images/FlamingArrow2.png");
-		Image bomb3 = loadImage("images/FlamingArrow3.png");
-		Image bomb4 = loadImage("images/FlamingArrow4.png");
-		Image bomb5 = loadImage("images/FlamingArrow5.png");
+		Image bomb = loadImage("images/FlamingArrow.png");
+		Image bomb2 = loadImage("images/FlamingArrow.png");
+		Image bomb3 = loadImage("images/FlamingArrow.png");
+		Image bomb4 = loadImage("images/FlamingArrow.png");
+		Image bomb5 = loadImage("images/FlamingArrow.png");
 		
 		//Player 2 - Special
-		Image P2bomb = loadImage("images/FlamingArrow1-2.png");
-		Image P2bomb2 = loadImage("images/FlamingArrow2-2.png");
-		Image P2bomb3 = loadImage("images/FlamingArrow3-2.png");
-		Image P2bomb4 = loadImage("images/FlamingArrow4-2.png");
-		Image P2bomb5 = loadImage("images/FlamingArrow5-2.png");
+		Image P2bomb = loadImage("images/FlamingArrow.png");
+		Image P2bomb2 = loadImage("images/FlamingArrow.png");
+		Image P2bomb3 = loadImage("images/FlamingArrow.png");
+		Image P2bomb4 = loadImage("images/FlamingArrow.png");
+		Image P2bomb5 = loadImage("images/FlamingArrow.png");
 		
 		//Barrage
-		Image hersco = loadImage("images/Barrage.png");
-		Image smallhersco = loadImage("images/Barragesmall.png");
+		Image hersco = loadImage("images/weaponUSSR.png");
+		Image smallhersco = loadImage("images/BarragesmallUSA.png");   //No idea what this does...
 		
 		//Weapon Collision
 		Image lilBoom = loadImage("images/lilboom.gif");
-
-
 		//Initiate Sounds
 		soundShot = new SoundPlayer();
 		tankHurt = new SoundPlayer();
